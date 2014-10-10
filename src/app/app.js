@@ -2,6 +2,8 @@ angular.module( 'ngBoilerplate', [
   'templates-app',
   'templates-common',
   'ngBoilerplate.home',
+  'ngBoilerplate.session1',
+  'ngBoilerplate.session2',
   'ngBoilerplate.about',
   'ui.router'
 ])
@@ -16,10 +18,15 @@ angular.module( 'ngBoilerplate', [
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
-      $scope.pageTitle = toState.data.pageTitle + ' | ngBoilerplate' ;
+      $scope.pageTitle = toState.data.pageTitle + ' |  GameDev At School' ;
     }
   });
+
+  $scope.sessions = [1, 2];
+  $scope.currentSession = 1;
+
+  $scope.setCurrentSession = function (sessionId) {
+      $scope.currentSession = sessionId;
+  };
 })
-
 ;
-

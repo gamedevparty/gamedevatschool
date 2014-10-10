@@ -1,0 +1,39 @@
+<div data-ng-init="presentation=false;games=false;groups=false;pitch=false;tools=false;">
+    <div class="row">
+        <h1 class="page-header">Séance 1</h1>
+        <h2>Déroulement</h2>
+        <ul>
+            <li><a href data-ng-click="presentation = !presentation">Présentation</a></li>
+            <li><a href data-ng-click="games = !games">Découverte de jeux indépendants</a></li>
+            <li><a href data-ng-click="groups = !groups">Les métiers</a></li>
+            <li><a href data-ng-click="pitch = !pitch">Définir le pitch du jeu</a></li>
+            <li><a href data-ng-click="tools = !tools">Découvrir les outils</a></li>
+        </ul>
+    </div>
+    <div id="presentation" class="row" data-ng-if="presentation">
+        <p>
+            Préparer au B2I : brevet informatique & internet
+            Faire découvrir des métiers : artwork, Game designer, développeur engine ui ia, sound designer, infographiste, gestion de projet, marketing
+            Mettre l'accent sur la créativité
+            Réaliser qqch même avec peu de moyens : démontrer que la créativité n'est pas soumise à l'argent
+            Donner envie d'étudier d'autres matières : le français, les maths, l'anglais, la musique, l'histoire ...
+            Le jeu réalisé serait open source / libre / licence creative commons (http://creativecommons.fr/licences/les-6-licences/) à discuter avec l'enseignant
+            Le projet (càd, l'organisation même) est, sur le même principe que les logiciels libre ouvert, modifiable, réutilisable
+            on veut pouvoir re-proposer l'expérience ou que d'autres écoles se l'approprient
+        </p>
+    </div>
+    <div id="games" class="row" data-ng-if="games">
+        <h2>Jeux à tester</h2>
+        <p>Qu'est-ce qu'un jeu "indie" (indépendant) ? En voici quelqu'uns</p>
+        <table class="table table-hover">
+            <tr>
+                <th>URL</th><th>type</th><th>objectif</th>
+            </tr>
+            <tr data-ng-repeat="game in ctrl.games">
+                <td><a href="{{ game.url }}">{{ game.url }}</a></td>
+                <td>{{ game.type }}</td>
+                <td>{{ game.description }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
