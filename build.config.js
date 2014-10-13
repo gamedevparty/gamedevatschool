@@ -7,7 +7,7 @@ module.exports = {
    * development and the `compile_dir` folder is where our app resides once it's
    * completely built.
    */
-  build_dir: 'build',
+  build_dir: 'gh-pages',
   compile_dir: 'bin',
 
   /**
@@ -22,7 +22,7 @@ module.exports = {
   app_files: {
     js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
-    
+
     coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
     coffeeunit: [ 'src/**/*.spec.coffee' ],
 
