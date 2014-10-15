@@ -7,8 +7,8 @@ module.exports = {
    * development and the `compile_dir` folder is where our app resides once it's
    * completely built.
    */
-  build_dir: 'gh-pages',
-  compile_dir: 'bin',
+  build_dir: 'build',
+  compile_dir: 'gh-pages',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -71,6 +71,8 @@ module.exports = {
     css: [
     ],
     assets: [
+      'vendor/impress.js/js/impress.js',
+      'vendor/impress.js/css/impress-demo.css'
     ]
   },
 };

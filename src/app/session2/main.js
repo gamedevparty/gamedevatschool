@@ -1,6 +1,5 @@
 angular.module( 'ngBoilerplate.session2', [
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 
