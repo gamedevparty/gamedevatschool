@@ -1,6 +1,5 @@
 angular.module( 'ngBoilerplate.session1', [
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 
@@ -18,21 +17,16 @@ angular.module( 'ngBoilerplate.session1', [
 })
 
 .controller( 'Session1Ctrl', function Session1Ctrl( $scope ) {
-  // This is simple a demo for UI Boostrap.
-  var ctrl = {};
-
-  ctrl.games = [
-      {
-          url: "http://game.ioxapp.com/color/",
-          type: "action",
-          description: "trouver la couleur différente"
-      },
-      {
-          url: "http://gabrielecirulli.github.io/2048/",
-          type: "reflexion",
-          description: "faire le plus gros chiffre en associant des tuiles"
-      }
-  ];
-
-  return ctrl;
+    this.games = [
+        {
+            url: "http://game.ioxapp.com/color/",
+            type: "action",
+            description: "trouver la couleur différente"
+        },
+        {
+            url: "http://gabrielecirulli.github.io/2048/",
+            type: "reflexion",
+            description: "faire le plus gros chiffre en associant des tuiles"
+        }
+    ];
 });
