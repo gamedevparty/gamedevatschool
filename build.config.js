@@ -72,7 +72,8 @@ module.exports = {
     ],
     assets: [
       'vendor/impress.js/js/impress.js',
-      'vendor/impress.js/css/impress-demo.css'
+      'vendor/impress.js/css/impress-demo.css',
+      'vendor/font-awesome/css/font-awesome.min.css'
     ]
   },
 };
