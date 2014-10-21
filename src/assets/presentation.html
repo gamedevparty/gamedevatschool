@@ -2,26 +2,116 @@
 <html>
     <head>
         <link href="./impress-demo.css" rel="stylesheet" />
+        <!-- <link href="./font-awesome.min.css" rel="stylesheet" /> -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <style>
+            /*
+            red : #FF4E42 rgb(255, 78, 66)
+            red darker : #B2261C
+            yellow : #EBFF42
+            blue: #2076CC
+            gray : #8A9EB2
+            */
 
+            body {
+                /*background-color: #B2261C;*/
+                background: #8A9EB2;
+                color: #2076CC;
+
+            }
+
+            small {
+                font-size: 0.5em;
+            }
+
+            .slide {
+                background-color: #8A9EB2;
+            }
+
+            .big.fa {
+
+            }
+
+            #ideas {
+                color: #2076CC;
+            }
+
+            #ideas p {
+                text-align: center;
+            }
+
+            #ideas .fa-lightbulb-o {
+                font-size: 4em;
+                color: #EBFF42;
+            }
+
+            #ready .title {
+                color: #2076CC;
+                font-family: sans-serif;
+                position: relative;
+                top: 1em;
+                z-index: 1000;
+            }
+
+            #ready .fa-gamepad {
+                color: #EBFF42;
+                font-size: 4em;
+            }
+            #ready .circle {
+                background-color: #FF4E42;
+                border: 0.05em solid #B2261C;
+                border-radius: 1em;
+                display: inline-block;
+                padding: 0.5em;
+                position: relative;
+                text-align: center;
+                width: 4em;
+            }
+        </style>
     </head>
     <body class="impress-not-supported">
         <div id="impress">
-            <div class="step slide" data-x="2000" data-y="-1500">
-                <p>
-                    Préparer au B2I : brevet informatique & internet
-                    Faire découvrir des métiers : artwork, Game designer, développeur engine ui ia, sound designer, infographiste, gestion de projet, marketing
-                    Mettre l'accent sur la créativité
-                </p>
+            <div class="step slide" data-x="0" data-y="0">
+                <q>
+                    <strong>Qui sommes nous ?</strong>
+                </q>
+                <q><img src="" alt="Association GameDevParty"/></q>
+                <q><small><i>Et que faisons-nous?</i></small></q>
             </div>
-                <p class="step slide" data-x="3000" data-y="-1500">
-                    Réaliser qqch même avec peu de moyens : démontrer que la créativité n'est pas soumise à l'argent
-                    Donner envie d'étudier d'autres matières : le français, les maths, l'anglais, la musique, l'histoire ...
-                </p>
-                <p class="step slide" data-x="4000" data-y="-1500">
-                    Le jeu réalisé serait open source / libre / licence creative commons (http://creativecommons.fr/licences/les-6-licences/) à discuter avec l'enseignant
-                    Le projet (càd, l'organisation même) est, sur le même principe que les logiciels libre ouvert, modifiable, réutilisable
-                    on veut pouvoir re-proposer l'expérience ou que d'autres écoles se l'approprient
-                </p>
+            <div class="step slide" data-x="1000" data-y="0">
+                <q><strong>Des jeux indépendants</strong></q>
+                <q><img alt="jeux réalisés en jam" /></q>
+                <q><small><i>Et pourquoi on est ici ?</i></small></q>
+            </div>
+            <div class="step slide" data-x="2000" data-y="0">
+                <q><strong>pour partager notre passion</strong></q>
+                <q><img alt="photo Jam" /></q>
+            </div>
+            <div class="step slide" data-x="3000" data-y="0">
+                <q>Pour faire un jeu il faut s'intéresser à  beaucoup de choses</q>
+                <ul>
+                    <li>les maths</li>
+                    <li>le français<li>
+                    <li>l'anglais</li>
+                    <li>la musique</li>
+                    <li>l'histoire</li>
+                    <li>...</li>
+                </ul>
+                <q><small><i>Mais pas que ...</i></small></q>
+            </div>
+            <div id="ideas" class="step slide" data-x="4000" data-y="0">
+                <q class="title"><strong>Des idées</strong></q>
+                <q><i class="fa fa-lightbulb-o"></i></q>
+            </div>
+            <div class="step slide" data-x="5000" data-y="0">
+                <q><strong>On va avoir besoin ...</strong></q>
+                <p>il faut un ordi, pas forcément un gros</p>
+                <p>Et puis chercher de l'aide sur internet ... sans se perdre ;)</p>
+                <q>Et parler de ce qu'on fait</q>
+            </div>
+            <div id="ready" class="step" data-x="-1000" data-y="0" data-scale="2">
+                <p class="title"><strong>Prêt ?!</strong></p>
+                <p class="circle"><i class="fa fa-gamepad"></i></p>
             </div>
         </div>
         <script src="./impress.js"></script>
