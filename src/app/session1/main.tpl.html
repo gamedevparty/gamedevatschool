@@ -1,4 +1,4 @@
-<div data-ng-init="presentation=false;games=false;groups=false;pitch=false;tools=false;">
+<div data-ng-init="games=false;groups=false;pitch=false;tools=false;">
     <div class="row">
         <h1 class="page-header">Séance 1</h1>
         <h2>Déroulement</h2>
@@ -6,7 +6,7 @@
             <li><a href="assets/presentation.html" target="_blank">Présentation</a></li>
             <li><a href data-ng-click="games = !games">Découverte de jeux indépendants</a></li>
             <li><a href data-ng-click="groups = !groups">Les métiers</a></li>
-            <li><a href data-ng-click="pitch = !pitch">Définir le pitch du jeu</a></li>
+            <li><a href data-ng-click="pitch = !pitch">Décrire le pitch du jeu</a></li>
             <li><a href data-ng-click="tools = !tools">Découvrir les outils</a></li>
         </ul>
     </div>
@@ -24,7 +24,72 @@
             </tr>
         </table>
     </div>
-    <div id="groups" class="row" data-ng-if="games">
+    <div id="groups" class="row" data-ng-if="groups">
         <h2>Les métiers du jeu vidéo</h2>
+        <h3>Level design et scénario</h3>
+        <p>
+            L'objectif est, à partir du pitch du jeu de décrire les évènements
+            (l'histoire s'il y en a une, comment on gagne ...). Décrire les
+            mécaniques du jeu (on peut sauter/ comment on marque un point ...). Puis
+            faire une maquette (un brouillon papier) du plateau de jeu (le niveau 1 par ex.)
+        </p>
+
+        <h3>Infographie</h3>
+        <p>
+            Préparer un artwork en partenariat avec les scénaristes pour exprimer l'univers
+            du jeu (réutilisable pour l'intro, la boîte du jeu et le site).
+            Préparer la scène de fin du jeu.
+            Réaliser les décors (cf. maquette). Réaliser les acteurs du jeu.
+            Préparer éventuellement les animations des acteurs (bonhomme qui marche ou qui fait coucou ...).
+        </p>
+        <h3>Ingénieurs son</h3>
+        <p>
+            Enregistrer les bruitages du jeu. Créer une musique de fond. Créer la musique de fin.
+            Mixer, enregistrer un format exploitable.
+        </p>
+
+        <h3>Développeurs</h3>
+        <p>
+            Prise en main de l'outil. Réaliser le moteur de jeu. Intégrer l'acteur définitif (cf. infographistes).
+            Intégrer le décor. Intégrer les sons. Déboguer. Intégrer la fin du jeu. Intégrer l'intro et menus.
+        </p>
+
+        <h3>Marketting</h3>
+        <p>
+            Promouvoir le jeu. Écrire dans le blog et décrire l'activité. Créer la boîte du jeu.
+            Prendre des photos ...
+        </p>
+
+        <h3>Chef de projet</h3>
+        <p>
+            Organiser les équipes. Répondre aux questions. Prendre des décisions. Définir
+            les prochaines étapes. Prévoir le budget ....
+        </p>
+
+        <h2>Il ne reste plus qu'à choisir un groupe</h2>
+        <p><small>Et on pourra s'adapter selon les besoins par la suite ...</small></p>
+    </div>
+    <div id="pitch" class="row" data-ng-if="pitch">
+        <h2>Décrire le pitch du jeu</h2>
+        <p>Avec toute la classe</p>
+        <ul>
+            <li>Réaliser un brainstorming et écrire une courte description de l'idée et le genre de jeu sur des post-it</li>
+            <li>Voter avec l'aide de badges</li>
+            <li>Étoffer un peu l'idée choisie : début - comment jouer 4/gagner - fin, faire des maquettes ...</li>
+            <li>Trouver un nom</li>
+        </ul>
+    </div>
+    <div id="tools" class="row" data-ng-if="tools">
+        <h2>Découvrir les outils</h2>
+        <table class="table table-hover">
+            <tr>
+                <th>Nom</th><th>URL</th><th>Description</th>
+            </tr>
+            <tr data-ng-repeat="tool in ctrl.tools">
+                <td data-ng-if="tool.url"><a href="tool.url">{{ tool.name }}</a></td>
+                <td><a href="{{ tool.url }}">{{ tool.url }}</a></td>
+                <td>{{ tool.description }}</td>
+            </tr>
+        </table>
     </div>
 </div>
