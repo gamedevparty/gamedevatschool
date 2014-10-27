@@ -75,9 +75,10 @@
         <ul>
             <li>Réaliser un brainstorming et écrire une courte description de l'idée et le genre de jeu sur des post-it</li>
             <li>Voter avec l'aide de badges</li>
-            <li>Étoffer un peu l'idée choisie : début - comment jouer 4/gagner - fin, faire des maquettes ...</li>
+            <li>Étoffer un peu l'idée choisie : début - comment jouer/gagner - fin, faire des maquettes ...</li>
             <li>Trouver un nom</li>
         </ul>
+        <p class="alert alert-info"><small>Les types de jeux : Action, Aventure, RPG, Réflexion, Simulation, Statégie, Rythme, Casse-brique</small></p>
     </div>
     <div id="tools" class="row" data-ng-if="tools">
         <h2>Découvrir les outils</h2>
@@ -86,7 +87,7 @@
                 <th>Nom</th><th>URL</th><th>Description</th>
             </tr>
             <tr data-ng-repeat="tool in ctrl.tools">
-                <td data-ng-if="tool.url"><a href="tool.url">{{ tool.name }}</a></td>
+                <td><a href="{{ tool.urlDownload }}">{{ tool.name }}</a></td>
                 <td><a href="{{ tool.url }}">{{ tool.url }}</a></td>
                 <td>{{ tool.description }}</td>
             </tr>
