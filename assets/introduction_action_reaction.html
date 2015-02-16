@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./impress-demo.css" rel="stylesheet" />
+        <!-- <link href="./font-awesome.min.css" rel="stylesheet" /> -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <style>
+            /*
+            red : #FF4E42 rgb(255, 78, 66)
+            red darker : #B2261C
+            yellow : #EBFF42
+            blue: #2076CC
+            gray : #8A9EB2
+            */
+
+            body {
+                /*background-color: #B2261C;*/
+                background: #8A9EB2;
+                color: #2076CC;
+
+            }
+
+            small {
+                font-size: 0.5em;
+            }
+
+            .slide {
+                background-color: #8A9EB2;
+            }
+
+            .slide q {
+                margin-top: 10px;
+            }
+
+            .picture {
+                text-align: center;
+            }
+
+            .picture img {
+                height: 8em;
+            }
+
+            .big.fa {
+
+            }
+
+            #ideas {
+                color: #2076CC;
+            }
+
+            #ideas p {
+                text-align: center;
+            }
+
+            #ideas .fa-lightbulb-o {
+                font-size: 4em;
+                color: #EBFF42;
+            }
+
+            #ready .title {
+                color: #2076CC;
+                font-family: sans-serif;
+                position: relative;
+                top: 1em;
+                z-index: 1000;
+            }
+
+            #ready .fa-gamepad {
+                color: #EBFF42;
+                font-size: 4em;
+            }
+            #ready .circle {
+                background-color: #FF4E42;
+                border: 0.05em solid #B2261C;
+                border-radius: 1em;
+                display: inline-block;
+                padding: 0.5em;
+                position: relative;
+                text-align: center;
+                width: 4em;
+            }
+        </style>
+    </head>
+    <body class="impress-not-supported">
+        <div id="impress">
+            <div class="step slide" data-x="0" data-y="0">
+                <q>
+                    <strong>Actions et Réactions</strong>
+                </q>
+                <q class="picture"><img src="no-idea-what-im-doing-dog.jpg" alt=""/></q>
+            </div>
+            <div class="step slide" data-x="1000" data-y="0">
+                <q><strong>Objectif : faire sauter un personnage</strong></q>
+                <q><small><i>Et dans la vraie vie comment ça se passe ?</i></small></q>
+                <!-- demander à un élève de sauter -->
+            </div>
+            <div class="step slide" data-x="2000" data-y="0">
+                <q><strong>C'est pareil avec un ordinateur</strong></q>
+                <q><small><i>L'ordinateur éxecute la fonction que l'on a programmé</i></small></q>
+                <!-- <q class="picture"><img alt="touche clavier -> fonction sauter()" src="" /></q> -->
+                <!-- l'exemple le plus simple : tapper sur la touche a fait apparaître la lettre "a" -->
+            </div>
+            <div class="step slide" data-x="3000" data-y="0">
+                <q>Oui mais comment on programme ? <small>(lol)</small></q>
+                <q class="picture"><img alt="all the things" src="misc-all-the-things-l" /></q>
+
+
+
+
+
+
+
+
+
+                <ul>
+                    <li>les maths</li>
+                    <li>le français<li>
+                    <li>l'anglais</li>
+                    <li>la musique</li>
+                    <li>l'histoire</li>
+                    <li>...</li>
+                </ul>
+                <q><small><i>Mais pas que ...</i></small></q>
+            </div>
+            <div id="ideas" class="step slide" data-x="4000" data-y="0">
+                <q class="title"><strong>Des idées</strong></q>
+                <q class="picture"><i class="fa fa-lightbulb-o"></i></q>
+            </div>
+            <div class="step slide" data-x="5000" data-y="0">
+                <q><strong>On va avoir besoin ...</strong></q>
+                <p>il faut un ordi, pas forcément un gros</p>
+                <p>Et puis chercher de l'aide sur internet ... sans se perdre ;)</p>
+                <q>Et parler de ce qu'on fait</q>
+            </div>
+            <div id="ready" class="step" data-x="-1000" data-y="0" data-scale="2">
+                <p class="title"><strong>Prêt ?!</strong></p>
+                <p class="picture circle"><i class="fa fa-gamepad"></i></p>
+            </div>
+        </div>
+        <script src="./impress.js"></script>
+        <script>impress().init();</script>
+    </body>
+</html>
