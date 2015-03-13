@@ -1,6 +1,7 @@
 *.sw*
 *~
 build/
+gh-pages/
 bin/
 node_modules/
 vendor/

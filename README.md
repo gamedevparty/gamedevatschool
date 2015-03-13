@@ -8,20 +8,32 @@ _Cette application est réalisée en angular avec [ngBoilerPlate][1]_
 
 ## Contribuer
 
+cf. Pré-requis
+
 1. Cloner le repo
 2. [installer les dépendances][2]
-2. proposer des PR
-3. compiler le projet pour gh-page
+3. Lancer le serveur local
 
 ~~~
-g submodule init
-g submodule update
-cd gh-page
-git checkout gh-page
-../grunt compile
-git commit --all
+git clone git@github.com:gamedevparty/gamedevatschool.git
+bower install
+grunt build watch
+http-server build
 ~~~
 
+## Déployer
+
+~~~
+git clone git@github.com:gamedevparty/gamedevatschool.git --branch gh-pages --single-branch gh-pages
+grunt compile
+(cd gh-pages && git commit --all && git push)
+~~~
+
+## Pré-requis
+
+~~~
+npm install -g bower grunt http-server
+~~~
 
 [1]: blob/master/README.ng-boiler-plate.md
 [2]: http://gamedevparty.fr
