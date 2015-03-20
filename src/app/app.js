@@ -6,6 +6,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.session2',
   'ngBoilerplate.session3',
   'ngBoilerplate.session4',
+  'ngBoilerplate.session5',
   'ngBoilerplate.about',
   'ui.router'
 ])
@@ -24,7 +25,7 @@ angular.module( 'ngBoilerplate', [
     }
   });
 
-  $scope.sessions = [1, 2, 3, 4];
+  $scope.sessions = [1, 2, 3, 4, 5];
   $scope.currentSession = 4;
 
   $scope.setCurrentSession = function (sessionId) {
