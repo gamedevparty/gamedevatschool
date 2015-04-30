@@ -11,14 +11,14 @@ _Cette application est réalisée en angular avec [ngBoilerPlate][1]_
 cf. Pré-requis
 
 1. Cloner le repo
-2. [installer les dépendances][2]
+2. installer les dépendances
 3. Lancer le serveur local
 
 ~~~
 git clone git@github.com:gamedevparty/gamedevatschool.git
-bower install
-grunt build watch
-http-server build
+npm install && bower install
+node_modules/.bin/grunt build watch
+node_modules/.bin/http-server build
 ~~~
 
 ## Déployer
