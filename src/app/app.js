@@ -27,7 +27,7 @@ angular.module( 'ngBoilerplate', [
   });
 
   $scope.sessions = [1, 2, 3, 4, 5, 6];
-  $scope.currentSession = 5;
+  $scope.currentSession = 6;
 
   $scope.setCurrentSession = function (sessionId) {
       $scope.currentSession = sessionId;
